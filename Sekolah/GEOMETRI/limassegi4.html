@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Limas Segi Empat</title>
+</head>
+<body>
+  <h2>Hitung Volume dan Luas Permukaan Limas</h2>
+
+  <label for="sisi">Sisi Alas (s):</label>
+  <input type="number" id="sisi"><br>
+
+  <label for="tinggi">Tinggi Limas (t):</label>
+  <input type="number" id="tinggi"><br>
+
+  <label for="tinggiSelimut">Tinggi Selimut (ts):</label>
+  <input type="number" id="tinggiSelimut"><br>
+
+  <button id="hitung">Hitung</button>
+
+  <p>Volume: <span id="volume"></span></p>
+  <p>Luas Permukaan: <span id="luas"></span></p>
+
+  <script>
+    const sisi = document.getElementById('sisi');
+    const tinggi = document.getElementById('tinggi');
+    const tinggiSelimut = document.getElementById('tinggiSelimut');
+    const hitung = document.getElementById('hitung');
+    const volumeLabel = document.getElementById('volume');
+    const luasLabel = document.getElementById('luas');
+
+    hitung.addEventListener('click', function() {
+      const s = parseFloat(sisi.value);
+      const t = parseFloat(tinggi.value);
+      const ts = parseFloat(tinggiSelimut.value);
+
+      const volume = (1/3) * s * s * t;
+      volumeLabel.innerHTML = volume;
+      const luasPermukaan = (s * s) + 4 * (1/2 * s * ts);
+      luasLabel.innerHTML = luasPermukaan;
+
+    });
+  </script>
+</body>
+</html>

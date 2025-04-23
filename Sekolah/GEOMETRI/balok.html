@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>balok</title>
+</head>
+<body>
+  <label for="panjang">Panjang</label>
+  <input type="number" name="" id="panjang">
+  <label for="lebar">Lebar</label>
+  <input type="number" name="" id="lebar">
+  <label for="tingi">Tinggi</label>
+  <input type="number" name="" id="tinggi">
+  <button id="hitung">Hitung</button>
+
+  <p>
+    Volume: <span id="v"></span>
+  </p>
+  <p>
+    Keliling: <span id="k"></span>
+  </p>
+  <script>
+    const panjang = document.getElementById('panjang')
+    const lebar = document.getElementById('lebar');
+    const tinggi = document.getElementById('tinggi');
+    const hitung = document.getElementById('hitung')
+    const labelv = document.getElementById('v')
+    const labelk = document.getElementById('k')
+
+    hitung.addEventListener('click', function(){
+      // let p = parseInt(panjang.value);
+      // let l = parseInt(lebar.value);
+      // let t = parseInt(tinggi.value);
+
+      let v = parseInt(panjang.value) * (lebar.value) * (tinggi.value);
+      labelv.innerHTML = v + "cm<sup>3</sup>";
+      let k = 4 * (parseInt(panjang.value) * (lebar.value) * (tinggi.value))
+      labelk.innerHTML = k + "cm<sup></sup>";
+
+  })
+    // let p = 10;
+    // let l = 20;
+    // let t= 30;
+
+    // const v = p * l * t;
+    // const lp = 2 * (p*l) + (p*t) + (l*t);
+    // const k = 4 * (p * l* t)
+    // console.log(`
+    // Volume Balok: ${v}\n
+    // Luas Permukaan Balok: ${lp}
+    // Keliling Balok: ${k}
+    // `);
+    // alert(`${v}\n${lp}\n${k}`)
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kondisi</title>
+</head>
+<body>
+  <label for="jari">Jari-Jari</label>
+  <input type="number" name="" id="jari">
+  <button id="hitung">Hitung</button>
+  <p>
+    Keliling  : <span id="keliling"></span>
+  </p>
+  <p>
+    Luas      : <span id="luas"></span>
+  </p>
+
+<script>
+  // let status = confirm("Apakah kamu mau lanjut?")
+  // if(status)
+  //   console.log(`Silahkan Lanjut`);
+  // else
+  //   console.log(`Aplikasi berhenti`);
+  const PHI = 3.14
+  const jari = document.getElementById('jari');
+  const hitung = document.getElementById('hitung')
+  const labelkeliling = document.getElementById('keliling')
+  const labelluas = document.getElementById('luas')
+
+  hitung.addEventListener('click', function(){
+    let keliling = parseInt(jari.value) * 2 * PHI;
+    labelkeliling.textContent = keliling + "cm";
+
+    let luas = parseInt(jari.value) * 2 * PHI;
+    labelluas.innerHTML = luas + "cm<sup>2</sup>";
+  })
+
+</script>
+</body>
+</html>
