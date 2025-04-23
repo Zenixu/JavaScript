@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kerucut</title>
+</head>
+<body>
+  <label for="jari">Jari-Jari</label>
+  <input type="number" name="" id="jari">
+  <button id="hitung">Hitung</button>
+
+  <p>
+    Volume: <span id="v"></span>
+  </p>
+  <p>
+    Luas Permukaan: <span id="lp"></span>
+  </p>
+
+  <script>
+    const PHI = 3.14;
+    const jari = document.getElementById('jari');
+    const hitung = document.getElementById('hitung')
+    const labelv = document.getElementById('v')
+    const labellp = document.getElementById('lp')
+
+    hitung.addEventListener('click', function(){
+
+
+      let v = 1/3 * PHI * (jari.value) ** 3;
+      labelv.innerHTML = v + "cm<sup>3</sup>";
+
+      let lp = 4 * PHI * (jari.value) ** 2;
+  })
+
+  </script>
+</body>
+</html>

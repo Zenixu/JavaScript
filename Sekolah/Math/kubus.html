@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KUBUS</title>
+</head>
+<body>
+  <label for="sisi">sisi</label>
+  <input type="number" name="" id="sisi">
+  <button id="hitung">Hitung</button>
+
+  <p>
+    Volume: <span id="v"></span>
+  </p>
+  <p>
+    Luas Permukaan: <span id="lp"></span>
+  </p>
+  <p>
+    Keliling: <span id="k"></span>
+  </p>
+
+  <script>
+    const sisi = document.getElementById('sisi');
+    const hitung = document.getElementById('hitung')
+    const labelv = document.getElementById('v')
+    const labellp = document.getElementById('lp')
+    const labelk = document.getElementById('k')
+
+    hitung.addEventListener('click', function(){
+
+
+      let v = sisi.value ** 3;
+      labelv.innerHTML = v + "cm<sup>3</sup>";
+
+      let lp = 6 * (sisi.value) ** 2;
+      labellp.innerHTML = lp + "cm<sup>2</sup>";
+
+      let k = 6 * (sisi.value) ** 2;
+      labelk.innerHTML = lp + "cm";
+  })
+
+  </script>
+</body>
+</html>

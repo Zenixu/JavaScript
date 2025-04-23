@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jajar genjang</title>
+</head>
+<body>
+  <label for="tingi">Tinggi</label>
+  <input type="number" name="" id="tinggi">
+  <label for="alas">alas</label>
+  <input type="number" name="" id="alas">
+  <button id="hitung">Hitung</button>
+
+  <p>
+    Luas Permukaan: <span id="l"></span>
+  </p>
+
+  <script>
+    const tinggi = document.getElementById('tinggi');
+    const alas = document.getElementById('alas');
+    const hitung = document.getElementById('hitung')
+    const labell = document.getElementById('l')
+
+    hitung.addEventListener('click', function(){
+
+
+      let l = (alas.value) *  (tinggi.value);
+      labell.innerHTML = l + "cm<sup></sup>";
+  })
+
+  </script>
+</body>
+</html>

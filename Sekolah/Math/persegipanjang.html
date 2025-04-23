@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>persegi Panjang</title>
+</head>
+<body>
+  <label for="panjang">panjang</label>
+  <label for="lebar">lebar</label>
+  <input type="number" name="" id="panjang">
+  <input type="number" name="" id="lebar">
+  <button id="hitung">Hitung</button>
+
+  <p>
+    Volume: <span id="v"></span>
+  </p>
+  <p>
+    Luas Permukaan: <span id="lp"></span>
+  </p>
+  <p>
+    Keliling: <span id="k"></span>
+  </p>
+
+  <script>
+    const panjang = document.getElementById('panjang');
+    const lebar = document.getElementById('lebar');
+    const hitung = document.getElementById('hitung')
+    const labell = document.getElementById('l')
+    const labelk = document.getElementById('k')
+
+    hitung.addEventListener('click', function(){
+
+
+      let l = panjang.value * lebar.value;
+      labell.innerHTML = l + "cm<sup>2</sup>";
+
+      let k = (panjang.value) * (lebar.value);
+      labelk.innerHTML = k + "cm";
+  })
+
+  </script>
+</body>
+</html>
