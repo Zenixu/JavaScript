@@ -21,6 +21,5 @@ function cekHariLusa() {
       pesan = "ini bukan nama hari";
   }
   
-  // Menampilkan hasil
   document.getElementById('hasil').textContent = pesan;
 }
