@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Kecocokan Pasangan</title>
+</head>
+<body>
+    <div>
+        <h1>
+          <span>❤️</span> 
+          Kalkulator Kecocokan Pasangan 
+          <span>❤️</span>
+        </h1>
+        <div>
+            <input type="text" id="player1" placeholder="Masukkan nama kamu" required>
+        </div>
+        <div>
+            <input type="text" id="player2" placeholder="Masukkan nama pasanganmu" required>
+        </div>
+        <button onclick="calculateLove()">Cek Kecocokan</button>
+        
+        <div id="result" style="display: none;">
+            <p>Tingkat kecocokan <span id="name1"></span> dan <span id="name2"></span> adalah</p>
+            <p id="percentage">0%</p>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script src="lovecal.js"></script>
+</body>
+</html>
