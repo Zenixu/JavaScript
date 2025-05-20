@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>menghitung bulan</title>
+</head>
+<body>
+  <script>
+    alert(" MEMBACA NAMA BULAN ")
+    let bulan = parseInt(prompt("Masukkan bulan (1-12) : "))
+    let nama_bulan = ["JANUARI",'FEBRUARI',"MARET","APRIL","MEI" ,"JUNI", "JULI", "AGUSTUS", "SEPTEMBER", "OKTOBER", "NOVEMBER", "DESEMBER"]
+    let nama_bulan_terpilih = nama_bulan[bulan - 1]
+    if (bulan >= 1 && bulan <= 12) {
+      alert(`Nama bulan ke-${bulan} adalah ${nama_bulan_terpilih}`)
+    } else {
+      alert("bulan tidak ada")
+    }
+  </script>
+</body>
+</html>

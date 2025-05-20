@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program login2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Program Login</h1>
+        <div class="input">
+            <label for="sisi">Masukkan Username:</label>
+            <input type="text" id="user">
+        </div>
+        <div class="input">
+            <label for="sisi">Masukkan Password</label>
+            <input type="text" id="pw">
+        </div>
+        <button onclick="login()">Hitung</button>
+        <div id="hasil" class="hasil">
+            <p id="out"></p>
+        </div>
+    </div>
+
+    <script>
+    function login() {
+  const userInput = document.getElementById('user').value.toLowerCase();
+  const pwInput = document.getElementById('pw').value.toLowerCase();
+  const outOutput = document.getElementById('out');
+
+  if(pwInput == 'zennrch' && userInput == '0987776'){
+    outOutput.textContent = 'Login Berhasil'
+  }else{
+    outOutput.textContent = 'Maaf,Password salah'
+  }
+}
+</script> 
+</body>
+</html>
