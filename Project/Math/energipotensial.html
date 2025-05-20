@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EnergiPotensial</title>
+</head>
+<body>
+  <label for="massa">Massa</label>
+  <input type="number" name="" id="massa">
+  <label for="ketinggian">ketinggian</label>
+  <input type="number" name="" id="ketinggian">
+  <button id="hitung">Hitung</button>
+
+  <p>
+    Energi Potensial: <span id="ep"></span>
+  </p>
+
+  <script>
+    const massa = document.getElementById('massa');
+    const ketinggian = document.getElementById('ketinggian');
+    const hitung = document.getElementById('hitung')
+    const labelep = document.getElementById('ep')
+
+    hitung.addEventListener('click', function(){
+      const G = 10;
+      let ep = (massa.value) * G * (massa.value);
+      labelep.innerHTML = ep + "cm<sup></sup>";
+  })
+
+  </script>
+</body>
+</html>

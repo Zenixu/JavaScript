@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refleksi Y</title>
+</head>
+<body>
+  <label for="X">X</label>
+  <input type="number" name="" id="X">
+  <label for="Y">Y</label>
+  <input type="number" name="" id="Y">
+  <button id="hitung">Hitung</button>
+
+  <p>
+    Luas Permukaan: <span id="ek"></span>
+  </p>
+
+  <script>
+    const X = document.getElementById('X');
+    const Y = document.getElementById('Y');
+    const hitung = document.getElementById('hitung')
+    const labelek = document.getElementById('ek')
+
+    hitung.addEventListener('click', function(){
+
+
+      let ek = (X.value) * 1/2 ** (X.value);
+      labelek.innerHTML = ek + "cm<sup></sup>";
+  })
+
+  </script>
+</body>
+</html>

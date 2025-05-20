@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EnergiKinetik</title>
+</head>
+<body>
+  <label for="massa">Massa</label>
+  <input type="number" name="" id="massa">
+  <label for="volume">volume</label>
+  <input type="number" name="" id="volume">
+  <button id="hitung">Hitung</button>
+
+  <p>
+    Energi Kinetik: <span id="ek"></span>
+  </p>
+
+  <script>
+    const massa = document.getElementById('massa');
+    const volume = document.getElementById('volume');
+    const hitung = document.getElementById('hitung')
+    const labelek = document.getElementById('ek')
+
+    hitung.addEventListener('click', function(){
+
+
+      let ek = (massa.value) * 1/2 ** (massa.value);
+      labelek.innerHTML = ek + "cm<sup></sup>";
+  })
+
+  </script>
+</body>
+</html>
