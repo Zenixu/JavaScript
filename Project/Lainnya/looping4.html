@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program looping 4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Program Looping 4</h1>
+    <button onclick="loop()">looping</button>
+    <div id="hasil" class="hasil">
+    </div>
+  </div>
+
+  <script>
+  function loop() {
+    const out = document.getElementById('hasil')
+    
+    let a = 1;
+    let output = "";
+    
+    while (a < 6) {
+        output += a + " ";
+        a++;
+    }
+    output += "= 15";
+    out.innerHTML = output;
+}  
+  </script> 
+</body>
+</html>

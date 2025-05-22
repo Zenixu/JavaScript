@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program kodisi suhu ruang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+      <h1>Program Kondisi Suhu Ruang</h1>
+      <div class="input">
+        <label for="sisi">Masukan suhu ruangan dalam bentuk celcius:</label>
+        <input type="number" id="suhu">
+      </div>
+      <button onclick="suhuR()">Hitung</button>
+      <div id="hasil" class="hasil">
+        <p id="out"></p>
+      </div>
+  </div>
+
+  <script>
+  function suhuR() {
+  const suhuInput = document.getElementById('suhu');
+  const outOutput = document.getElementById('out');
+
+  const suhu = parseInt(suhuInput.value)
+
+  if (suhu >= 50){
+    outOutput.textContent = 'nyalakan tanda bahaya'
+  }else if (suhu <= 20){
+    outOutput.textContent = 'matikan ac'
+  }else{
+    outOutput.textContent = 'suhu ruangan nya berapa bang'
+  }
+}
+</script> 
+</body>
+</html>
