@@ -3,27 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Program looping 1</title>
+  <title>Program looping 7</title>
 </head>
 <body>
   <div class="container">
-    <h1>Program Looping 1</h1>
+    <h1>Program Looping 7</h1>
     <button onclick="loop()">looping</button>
     <div id="hasil" class="hasil">
-      <p id="out"></p>
     </div>
   </div>
-
   <script>
   function loop() {
-    const out = document.getElementById('out')
-      
-    let output = " ";
-    for (let a = 0; a < 4; a++) {
-        output += "Cerdas ";
+    const out = document.getElementById('hasil')
+    
+    let output = "";
+    for (let a = 0; a < 6; a++) {
+        output += "*".repeat(a) + "<br>";
     }
-    out.textContent = output
-  }  
-  </script> 
+  out.innerHTML = output;
+  }   
+</script> 
 </body>
 </html>
