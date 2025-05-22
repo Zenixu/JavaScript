@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program kalor air</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Program Kalor Air</h1>
+    <div class="input">
+      <label for="sisi">Masukan massa benda:</label>
+      <input type="number" id="massa">
+    </div>
+    <div class="input">
+      <label for="sisi">Masukan suhu awal:</label>
+      <input type="number" id="awal">
+    </div>
+    <div class="input">
+      <label for="sisi">Masukan suhu akhir:</label>
+      <input type="number" id="akhir">
+    </div>
+    <button onclick="air()">Hitung</button>
+    <div id="hasil" class="hasil">
+      <p id="out"></p>
+    </div>
+  </div>
+
+  <script>
+  function air() {
+    const massaInput = document.getElementById('massa');
+    const awalInput = document.getElementById('awal');
+    const akhirInput = document.getElementById('akhir');
+    const outOutput = document.getElementById('out');
+
+    const c = 4.18
+    const m = parseInt(massaInput.value);
+    const suhu_awal = parseInt(awalInput.value);
+    const suhu_akhir = parseInt(akhirInput.value);
+    
+    let t = suhu_awal - suhu_akhir
+    let q3 = m * c * t
+
+    outOutput.textContent = `jumlah kalor yang diperlukan adalah = ${q3}`
+  }
+  </script> 
+</body>
+</html>

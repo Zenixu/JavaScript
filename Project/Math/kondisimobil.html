@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program kodisi mobil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Program Kondisi Mobil</h1>
+    <div class="input">
+      <label for="sisi">Masukan Kondisi Mobil:</label>
+      <input type="text" id="mobil">
+    </div>
+    <button onclick="mobil()">Hitung</button>
+    <div id="hasil" class="hasil">
+      <p id="out"></p>
+    </div>
+  </div>
+
+  <script>
+  function mobil() {
+  const mobilInput = document.getElementById('mobil').value.toLowerCase();
+  const outOutput = document.getElementById('out');
+
+  if(mobilInput == "rusak"){
+    outOutput.textContent = 'Jangan Lupa Service'
+  }else if (mobilInput == "bagus"){
+    outOutput.textContent = 'Mantap Lanjut'
+  }else{
+    outOutput.textContent = 'okeh'
+  }
+}
+</script> 
+</body>
+</html>

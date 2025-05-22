@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program kecepatan berkendara</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Program Kecepatan Berkendara</h1>
+    <div class="input">
+      <label for="sisi">Masukan jarak (m):</label>
+      <input type="number" id="jarakK">
+    </div>
+    <div class="input">
+      <label for="sisi">Masukan waktu (s):</label>
+      <input type="number" id="waktuK">
+    </div>
+    <button onclick="kecepatan()">Hitung</button>
+    <div id="hasil" class="hasil">
+      <p id="out"></p>
+    </div>
+  </div>
+
+  <script>
+  function kecepatan() {
+  const jarakInput = document.getElementById('jarakK');
+  const waktuInput = document.getElementById('waktuK');
+  const outOutput = document.getElementById('out');
+
+  const jarak = parseInt(jarakInput.value);
+  const waktu = parseInt(waktuInput.value);
+  
+  let kecepatan = jarak / waktu
+
+  outOutput.textContent = `kecepatan kendaraan anda adalah = ${kecepatan.toFixed()} m/s`
+}
+  </script> 
+</body>
+</html>
