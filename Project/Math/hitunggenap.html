@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program hasil angka genap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Program Hasil Angka Genap</h1>
+    <div class="input">
+      <label for="sisi">Masukan angka :</label>
+      <input type="number" id="angka">
+    </div>
+    <button onclick="hitungGenap()">Hitung</button>
+    <div id="hasil" class="hasil">
+      <p id="out"></p>
+    </div>
+  </div>
+  
+  <script>
+  function hitungGenap() {
+    const angka = parseInt(document.getElementById("angka").value);
+    const out = document.getElementById("out");
+      
+    if (isNaN(angka) || angka < 1) {
+      out.textContent = "Masukkan angkanya bang";
+      return;
+    }
+    
+    let jumlah = 0;
+    let i = 0;
+    while(i <= angka){
+      if(i % 2 == 0){
+        jumlah += i
+      }
+      i++
+  }
+  
+  out.textContent = `Hasil penjumlahan angka genap dari 1 sampai ${angka} adalah: ${jumlah}`;
+  }
+  </script> 
+</body>
+</html>

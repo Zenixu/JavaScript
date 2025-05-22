@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program ganjil genap</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Program Ganjl Genap</h1>
+        <div class="input">
+            <label for="sisi">Masukan nilai angka:</label>
+            <input type="text" id="angka">
+        </div>
+        <button onclick="btn()">Hitung</button>
+        <div id="hasil" class="hasil">
+            <p id="out"></p>
+        </div>
+    </div>
+
+    <script>
+    function btn() {
+  const angkaInput = document.getElementById('angka');
+  const outOutput = document.getElementById('out');
+
+  const user = parseInt(angkaInput.value);
+
+  let rumus = user % 2
+
+  if(user == rumus){
+    outOutput.textContent = 'GENAP'
+  }else{
+    outOutput.textContent = 'GANJIL'
+  }
+}
+</script> 
+</body>
+</html>

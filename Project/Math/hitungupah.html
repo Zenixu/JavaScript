@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program tebak angka</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Program Tabak Angka</h1>
+        <div class="input">
+            <label for="sisi">Masukan golongan (A,B,C,D):</label>
+            <input type="text" id="gol">
+        </div>
+        <div class="input"> 
+            <label for="sisi">Masukan jam kerja:</label>
+            <input type="number" id="kerja">
+        </div>
+        <div class="input">
+            <label for="sisi">Masukan jam lembur:</label>
+            <input type="number" id="lembur">
+        </div>
+        <button onclick="upah()">Hitung</button>
+        <div id="hasil" class="hasil">
+            <p id="out"></p>
+        </div>
+    </div>
+
+  <script>function upah() {
+    const golongan = document.getElementById('gol').value.toUpperCase();
+    const kerjaInput = document.getElementById('kerja');
+    const lemburInput = document.getElementById('lembur');
+    const outOutput = document.getElementById('out');
+
+    const jam_kerja = parseInt(kerjaInput.value)
+    const jam_lembur = parseInt(lemburInput.value)
+
+    let upah_perjam = ''
+
+    if (golongan == 'A'){
+      upah_perjam = 4000;
+    }else if (golongan == 'B'){
+      upah_perjam = 5000;
+    }else if (golongan == 'C'){
+      upah_perjam = 6000;
+    }else if (golongan == 'D'){
+      upah_perjam = 7500;
+    }else{
+      outOutput.textContent = 'golongan tidak ada'
+      upah_perjam = 0
+    }
+
+    let upah_kerja = jam_kerja * upah_perjam
+    let upah_lembur = jam_kerja * (upah_perjam * 1.5)
+    let total_upah = jam_lembur + upah_perjam
+
+    outOutput.textContent = `total upah : Rp.${total_upah}`
+  }                   
+  </script> 
+</body>
+</html>
